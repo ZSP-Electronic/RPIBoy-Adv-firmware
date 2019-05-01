@@ -10,7 +10,7 @@ clear
 
 # Variables-----------------------------------------
 
-if [[ $3 != "" ]; then
+if [[ $3 != "" ]]; then
    DESTBOOT=$3
 else
    DESTBOOT="/boot"
