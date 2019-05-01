@@ -28,7 +28,7 @@ BINDIR="$PIHOMEDIR/$GITHUBPROJECT"
 USER-"pi"
 
 # Functions-----------------------------------------
-execue() {
+execute() {
    if [ $# != 1 ]; then
       echo "ERROR: No args passed"
       exit 1
@@ -77,7 +77,7 @@ pip install progressbar
 cd
 execute "mkdir $GITHUBPROJECT"
 execute "cd /$GITHUBPROJECT"
-curl -LO https://raw.githubusercontent.com/ZSPina/RPIBoy-Advance/master/firmware
+execute "git clone https://github.com/ZSPina/RPIBoy-Advance/master/firmware"
 
 # Copy service script to directory
 #execute "cp runonstart.service /etc/systemd/system/runonstart.service"
