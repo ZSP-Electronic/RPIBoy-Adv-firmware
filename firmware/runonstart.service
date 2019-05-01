@@ -1,0 +1,8 @@
+[Unit]
+Description=GPIO control for communicating to STM32 for RPIBoy
+
+[Service]
+ExecStart=/home/pi/RPIBoy-Advance/python runonstart.py
+
+[Install]
+WantedBy=multi-user.target
