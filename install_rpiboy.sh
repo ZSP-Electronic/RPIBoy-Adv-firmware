@@ -74,22 +74,25 @@ apt-get install -y --force-yes python-pip python-dev
 pip install pyserial --upgrade
 pip install progressbar
 
-cd
-execute "mkdir $GITHUBPROJECT"
-execute "cd /$GITHUBPROJECT"
-execute "git clone https://github.com/ZSPina/RPIBoy-Advance/master/firmware"
+execute "cd $PIHOMEDIR"
+execute "git clone https://github.com/ZSPina/RPIBoy-Advance"
+execute "cd RPIBoy-Advance"
+execute "rm -r hardware"
+execute "cd firmware"
 
-# Copy service script to directory
+# Copy service script to directory ------------------------------------
 #execute "cp runonstart.service /etc/systemd/system/runonstart.service"
 #execute "systemctl enable runonstart.service"
 
+execute "cp &BINDIR/firmware/stm32_firmware/stm32Programmer.py $BINDIR/"
+execute "cp &BINDIR/firmware/runonstart.py $BINDIR/"
+execute "cp &BINDIR/firmware/update.sh $BINDIR/"
 
-
-# Disable 'wait for network' on boot
+# Disable 'wait for network' on boot ----------------------------------
 #execute "rm -f $DEST/etc/systemd/system/dhcpcd.service.d/wait.conf"
 
 # Copy wifi firmware
-#execute "cp $BINDIR/wifi-firmware/rtl* $DEST/lib/firmware/trlwifi/"
+#execute "cp $BINDIR/firmware/wifi-firmware/rtl* $DEST/lib/firmware/rtlwifi/"
 
 echo -e  "Done\n"
 
