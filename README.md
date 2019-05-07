@@ -1,5 +1,7 @@
 # RPIBoy-Advance
-A Raspberry Pi Gameboy like portable using the Compute module 3+
+A Raspberry Pi Gameboy portable using the Compute module 3+ Lite
+
+
 
 ### Install script:
   ````

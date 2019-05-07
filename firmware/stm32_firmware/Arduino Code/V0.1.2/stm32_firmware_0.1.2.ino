@@ -7,7 +7,7 @@
 
 #define LOAD    PA5
 #define SEROUT  PA3
-//#define HCCLK   PA4
+#define HCCLK   PA4
 
 USBXBox360 XBox360;
 

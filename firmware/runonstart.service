@@ -2,7 +2,7 @@
 Description=GPIO control for communicating to STM32 for RPIBoy
 
 [Service]
-ExecStart=/home/pi/RPIBoy-Advance/python runonstart.py
+ExecStart=/home/pi/RPIBoy-Advance/python autostart.py
 
 [Install]
 WantedBy=multi-user.target
