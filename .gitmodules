@@ -1,0 +1,3 @@
+[submodule "Retropie-open-OSD"]
+	path = Retropie-open-OSD
+	url = https://github.com/ZSPina/Retropie-open-OSD.git

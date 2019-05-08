@@ -81,9 +81,9 @@ if [ $FINSTALL == 1 ]; then
 	pip install progressbar
 
 	cd $PIHOMEDIR
-	git clone https://github.com/ZSPina/RPIBoy-Advance
+	git clone --recursive https://github.com/ZSPina/RPIBoy-Adv-firmware.git
+	mv RPIBoy-Adv-firmware RPIBoy-Advance
 	cd RPIBoy-Advance
-	rm -r hardware
 fi
 
 cd firmware
